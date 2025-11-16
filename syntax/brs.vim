@@ -43,6 +43,14 @@ syn match brsLoop /\v\c<end ?(for|while)>/
 syn match brsLoop /\v\c^\s*next>/
 " }}}
 
+" try catch {{{
+syn keyword brsExceptions
+    \ try
+    \ catch
+    \ throw
+syn match brsExceptions /\v\c<end try>/
+" }}}
+
 " misc statements {{{
 syn match brsStatement /\v\c<exit (for|while)/
 syn match brsStatement /\v\c<return>/
@@ -406,6 +414,7 @@ hi default link brsCondit Conditional
 hi default link brsLoop Repeat
 hi default link brsFunctDef Label
 hi default link brsStatement Statement
+hi default link brsExceptions Statement
 " }}}
 
 " vim:et:sw=4:ts=4:fdm=marker:
